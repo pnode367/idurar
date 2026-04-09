@@ -1,3 +1,5 @@
+import lang from './translation/en_us';
+
 const getLabel = (key) => {
   try {
     const lowerCaseKey = key
@@ -5,7 +7,7 @@ const getLabel = (key) => {
       .replace(/[^a-zA-Z0-9]/g, '_')
       .replace(/ /g, '_');
 
-    // if (lang[lowerCaseKey]) return lang[lowerCaseKey];
+    if (lang[lowerCaseKey]) return lang[lowerCaseKey];
 
     // convert no found language label key to label
 
